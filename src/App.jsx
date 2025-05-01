@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import Options from './components/Options/Options';
 import Feedback from './components/Feedback/Feedback';
 import Notification from './components/Notification/Notification';
+import Description from './components/Description/Description';
+
 
 const STORAGE_KEY = 'feedback-data';
 
@@ -36,10 +38,8 @@ const App = () => {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1>Sip Happens Café</h1>
-      <p>
-        Please leave your feedback about our service by selecting one of the options below.
-      </p>
+      <Description />
+
 
       <Options
         onLeaveFeedback={updateFeedback}
